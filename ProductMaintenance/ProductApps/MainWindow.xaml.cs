@@ -39,8 +39,13 @@ namespace ProductApps
 
                 // Calculate total charge including delivery charge
                 decimal deliveryCharge = 25.00m;
+                decimal wrappingCharge = 5.00m;
                 decimal totalCharge = cProduct.TotalPayment + deliveryCharge;
                 totalChargeTextBlock.Text = totalCharge.ToString("C", CultureInfo.CurrentCulture); // Format total charge as currency
+
+                // Calculate total charge including delivery and wrapping charges
+                decimal totalChargeWithWrapping = totalCharge + wrappingCharge;
+                totalChargeWithWrappingTextBlock.Text = totalChargeWithWrapping.ToString("C", CultureInfo.CurrentCulture); // Format total charge as currency
             }
             catch (FormatException)
             {

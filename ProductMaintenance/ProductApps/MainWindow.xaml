@@ -18,5 +18,10 @@
         <!-- New label and text block for displaying total charge after adding delivery charge -->
         <Label Content="Total Charge after adding&#xA;the delivery charge ($25)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,200,0,0" Width="200"/>
         <TextBlock Name="totalChargeTextBlock" HorizontalAlignment="Left" Height="23" Margin="204,207,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75"/>
+
+        <!-- New label and text block for displaying total charge after adding delivery charge -->
+        <Label Content="Total Charge after adding&#xA;wrapping charge" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,240,0,0" Width="300"/>
+        <TextBlock Name="totalChargeWithWrappingTextBlock" HorizontalAlignment="Left" Height="23" Margin="204,249,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75"/>
+
     </Grid>
 </Window>
