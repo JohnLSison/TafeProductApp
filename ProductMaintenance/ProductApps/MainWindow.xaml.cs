@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,12 @@ namespace ProductApps
                 cProduct = new Product(Convert.ToDecimal(priceTextBox.Text), Convert.ToInt16(quantityTextBox.Text));
                 cProduct.calTotalPayment();
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
+
+
+                // Calculate total charge including delivery charge
+                decimal deliveryCharge = 25.00m;
+                decimal totalCharge = cProduct.TotalPayment + deliveryCharge;
+                totalChargeTextBlock.Text = totalCharge.ToString("C", CultureInfo.CurrentCulture); // Format total charge as currency
             }
             catch (FormatException)
             {
