@@ -46,6 +46,11 @@ namespace ProductApps
                 // Calculate total charge including delivery and wrapping charges
                 decimal totalChargeWithWrapping = totalCharge + wrappingCharge;
                 totalChargeWithWrappingTextBlock.Text = totalChargeWithWrapping.ToString("C", CultureInfo.CurrentCulture); // Format total charge as currency
+
+                // Calculate total charge after adding GST at 10%
+                decimal gstRate = 0.1m; // 10%
+                decimal totalChargeAfterGST = totalChargeWithWrapping * (1 + gstRate);
+                totalChargeAfterGSTTextBlock.Text = totalChargeAfterGST.ToString("C", CultureInfo.CurrentCulture); // Format total charge after GST as currency
             }
             catch (FormatException)
             {
